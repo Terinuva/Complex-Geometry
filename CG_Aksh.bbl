@@ -1,0 +1,18 @@
+\def\cprime{$'$} \def\polhk#1{\setbox0=\hbox{#1}{\ooalign{\hidewidth
+  \lower1.5ex\hbox{`}\hidewidth\crcr\unhbox0}}}
+\begin{thebibliography}{Lee12}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2}\fi
+\expandafter\ifx\csname burlalt\endcsname\relax
+  \def\burlalt#1#2{\href{#2}{\texttt{#1}}}\fi
+
+\bibitem[Lee12]{Lee12}
+\textsc{J.~Lee}.
+\newblock \emph{Introduction to Smooth Manifolds}.
+\newblock Graduate Texts in Mathematics, 218. Springer New York, New York, NY,
+  $2^{\text{nd}}$ ed., 2012.
+
+\end{thebibliography}

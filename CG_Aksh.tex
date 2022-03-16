@@ -1,0 +1,693 @@
+\documentclass[11pt]{preprint}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{breakurl}
+\usepackage{mhenvs}
+\usepackage{mhequ}
+\usepackage{mhsymb}	
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{mathrsfs}
+\usepackage{times}
+\usepackage{microtype}
+\usepackage{comment}
+\usepackage{slashed}
+\usepackage{mathtools}
+%\usepackage{wasysym}
+\usepackage{centernot}
+\usepackage{leftidx}
+\usepackage{accents}
+\usepackage{arydshln}
+%\usepackage{showkeys}
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+\usepackage{enumitem}
+\usepackage{stackrel}
+\usepackage{halloweenmath}
+\usepackage{longtable}%\usepackage{scalerel}
+\usepackage{array}
+\usepackage{cprotect}
+\usepackage{xstring}
+%\usepackage{wasysym}
+%\usepackage{centernot}
+\usepackage{ulem}
+\usepackage{stmaryrd}
+\usepackage{titlesec}
+\usepackage{authblk}
+\usepackage{mleftright}
+
+
+%%%%Commutative Diagram Package%%%%
+\usepackage[cmtip,arrow]{xy}
+\usepackage{lamsarrow}
+\usepackage{pb-diagram}
+\usepackage{pb-lams}
+\usepackage{pb-xy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\setlength{\marginparsep}{2mm}
+\setlength{\marginparwidth}{4cm}
+
+\renewcommand{\ttdefault}{lmtt}
+
+\DeclareSymbolFont{timesoperators}{T1}{ptm}{m}{n}
+\SetSymbolFont{timesoperators}{bold}{T1}{ptm}{b}{n}
+
+\makeatletter
+\renewcommand{\operator@font}{\mathgroup\symtimesoperators}
+\makeatother
+
+
+
+\colorlet{symbolsgrey}{blue!30!black!50}
+\colorlet{testcolor}{green!60!black}
+\definecolor{purple}{rgb}{0.55,0.05,0.8}
+\definecolor{symbols}{rgb}{0.55,0.05,0.8}
+
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{shapes.symbols}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{snakes}
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.markings}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{external}
+
+
+\newtheorem{assumption}[lemma]{Assumption}
+\newtheorem{example}[lemma]{Example}
+\newtheorem{defn}[lemma]{Definition}
+
+
+\let\oldskull\skull
+\def\skull{\mathord{\oldskull}}
+
+
+\def\sol{{\mathop{\mathrm{sol}}}}
+\def\init{{\mathop{\mathrm{init}}}}
+\def\pr{\textcolor{purple}}
+\def\expan{\mcb{H}} 
+
+\newcommand{\hooklongrightarrow}{\lhook\joinrel\longrightarrow}
+\newcommand{\longrightharpoonup}{\relbar\joinrel\rightharpoonup}
+
+\def\monom{\Theta}
+
+\def\restr{\mathbin{\upharpoonright}}
+
+\def\Tran{\mathrm{Tran}}
+\def\wotimes{\mathbin{\widehat{{\otimes}}}}
+\def\totimes{\mathbin{\widetilde{{\otimes}}}}
+\def\snabla{\slashed{\nabla}}
+
+\DeclareMathAlphabet{\mathbbm}{U}{bbm}{m}{n}
+
+\overfullrule=3mm
+\marginparwidth=3.3cm
+
+\DeclareFontFamily{U}{BOONDOX-calo}{\skewchar\font=45 }
+\DeclareFontShape{U}{BOONDOX-calo}{m}{n}{
+  <-> s*[1.05] BOONDOX-r-calo}{}
+\DeclareFontShape{U}{BOONDOX-calo}{b}{n}{
+  <-> s*[1.05] BOONDOX-b-calo}{}
+\DeclareMathAlphabet{\mcb}{U}{BOONDOX-calo}{m}{n}
+\SetMathAlphabet{\mcb}{bold}{U}{BOONDOX-calo}{b}{n}
+%\DeclareMathAlphabet{\mathbcalboondox}{U}{BOONDOX-calo}{b}{n}
+
+\setlist{noitemsep,topsep=4pt}
+
+
+
+\makeatletter % Stolen from the internet to make a fat \cdot which isn't as fat as a \bullet
+\newcommand*{\bigcdot}{}% Check if undefined
+\DeclareRobustCommand*{\bigcdot}{%
+  \mathbin{\mathpalette\bigcdot@{}}%
+}
+\newcommand*{\bigcdot@scalefactor}{.5}
+\newcommand*{\bigcdot@widthfactor}{1.15}
+\newcommand*{\bigcdot@}[2]{%
+  % #1: math style
+  % #2: unused
+  \sbox0{$#1\vcenter{}$}% math axis
+  \sbox2{$#1\cdot\m@th$}%
+  \hbox to \bigcdot@widthfactor\wd2{%
+    \hfil
+    \raise\ht0\hbox{%
+      \scalebox{\bigcdot@scalefactor}{%
+        \lower\ht0\hbox{$#1\bullet\m@th$}%
+      }%
+    }%
+    \hfil
+  }%
+}
+\makeatother
+
+
+\def\symbol#1{\textcolor{symbolsgrey}{#1}}
+\def\1{\mathbf{\symbol{1}}}
+\def\X{\symbol{X}}
+\def\enorm#1{| #1|_{\eps}}
+\def\snorm#1{\Vert #1\Vert_\s}
+\def\sabs#1{| #1|_\s}
+\newcommand{\verteq}{\rotatebox{90}{=}}
+\newcommand{\cev}[1]{\reflectbox{\ensuremath{\vec{\reflectbox{\ensuremath{#1}}}}}}
+\newcommand{\veccev}[1]{\overset{\text{\tiny$\leftrightarrow$}}{#1}}
+\def\PPsi{\symbol{\Psi}}
+\def\hPsi{\hat{\symbol{\Psi}}}
+\def\sXi{\symbol{\Xi}}
+\def\I{\symbol{\CI}}
+\def\J{\symbol{\CJ}}
+\def\Projection{\mathbf P}
+
+\def\bone{\mathbf{1}}
+
+\def\higgsvec{\mathbf{V}}
+
+\def\Cst{{}_{\eps}C}
+
+\def\smooth{\mcb{C}^\infty}
+
+\let\p\partial
+\def\bB{\boldsymbol{B}}
+\def\bPsi{\boldsymbol{\Psi}}
+\def\tbPsi{\tilde{\boldsymbol{\Psi}}}
+\def\id{\mathrm{id}}
+\def\PPi{\boldsymbol{\Pi}}
+\def\hPPi{\rlap{$\hat{\phantom{\PPi}}$}\PPi}
+\def\bbrho{\bar{\boldsymbol{\rho}}}
+\def\brho{\boldsymbol{\rho}}
+
+\def\Lab{\mathfrak{L}}
+\def\sco{f}
+
+\def\inv{\textnormal{\tiny inv}}
+\def\op{\textnormal{\tiny op}}
+\def\edge{\textnormal{\tiny edge}}
+\def\edge{\textnormal{\tiny node}}
+
+\def\can{\textnormal{\scriptsize can}}
+\def\sym{\textnormal{\tiny \textsc{sym}}}
+\def\symg{\textnormal{\tiny \textsc{symg}}}
+\def\gsym{\textnormal{\tiny \textsc{gsym}}}
+\def\BPHZ{\textnormal{\tiny \textsc{bphz}}}
+\def\YMH{\textnormal{\tiny \textsc{ymh}}}
+\def\YM{\textnormal{\tiny \textsc{ym}}}
+\def\YMHG{\textnormal{\tiny \textsc{ymhg}}}
+\def\Higgs{\textnormal{\tiny {Higgs}}}
+\def\Gauge{\textnormal{\tiny {Gauge}}}
+\def\even{\textnormal{\tiny even}}
+\def\odd{\textnormal{\tiny odd}}
+\def\rand{\mbox{\tiny rand}}
+\def\Div{\mathrm{Div}}
+\def\Dom{\mathrm{Dom}}
+\def\DDom{\mathcal{D}}
+\def\A{\textnormal{A}}
+\def\h{\textnormal{h}}
+\def\lead{\textnormal{\tiny lead}}
+
+
+\def\moll{\chi}
+\def\Hol#1{#1\textnormal{-H{\"o}l}}
+\def\var#1{#1\textnormal{-var}}
+\def\hol{\textnormal{hol}}
+\def\gr#1{#1\textnormal{-gr}}
+\def\rp#1{#1\textnormal{-rp}}
+\def\state{\mathcal{S}}
+\def\init{\mathcal{I}}
+\let\ymhflow\CF
+\def\flow{\CE}
+
+\def\fancynorm#1{{\talloblong #1 \talloblong}}
+\def\heatgr#1{{|\!|\!| #1 |\!|\!|}}
+
+\newcommand{\mrd}{\mathrm{d}}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\roof}[1]{\lceil #1 \rceil}
+
+
+\colorlet{darkblue}{blue!90!black}
+\colorlet{darkgreen}{green!50!black}
+\let\comm\comment
+\def\martin#1{\comm[darkred]{MP: #1}}
+\def\aksh#1{\comm[darkblue]{AD: #1}}
+
+
+\long\def\ajayText#1{{\color{darkred}Ajay:\ #1}}
+\long\def\martinText#1{{\color{darkblue}Martin:\ #1}}
+\long\def\haoText#1{{\color{darkgreen}Hao:\ #1}}
+\long\def\ilyaText#1{{\color{brown}Ilya:\ #1}}
+
+\let\M\CM
+\let\D\CD
+\def\s{\mathfrak{s}}
+\def\KK{\mathfrak{K}}
+\def\be{\mathbf e}
+\def\poly #1{{#1}_{\mathrm{poly}}}
+\def\onorm#1{| #1|_0}
+
+\def\reg{\mathrm{reg}}
+\def\rhs{\mathrm{rhs}}
+
+\def\Func{\mathbf{F}}
+\let\eref\eqref
+\def\proj{\mathbf{p}}
+\newcommand{\e}{\varepsilon}
+\newcommand{\V}  {\overline{V}}
+\def\K{\mathfrak{K}}
+\def\DeltaM{\Delta^{\!M}}
+\def\hDeltaM{\hat \Delta^{\!M}}
+\def\Ren{\mathscr{R}}
+\def\MM{\mathscr{M}}
+\def\TT{\mathscr{T}}
+\def\DD{\symbol{\mathscr{D}}}
+\def\RR{\mathfrak{R}}
+\def\GGamma#1{\Gamma_{\!#1}}
+\def\bGGamma#1{\bar \Gamma_{\!#1}}
+\def\bbar#1{\bar{\bar #1}}
+\def\${|\!|\!|}
+\def\Wick#1{\mathord{\kern0.1em{:}#1{:}\kern0.1em}}
+\def\E{\mathbf{E}}
+\def\T{\mathbf{T}}
+\def\Cum{\mathbf{E}_c}
+\def\P{\mathbf{P}}
+\def\powerset{\mathscr{P}}
+\def\div{\mbox{div}}
+\def\curl{\mbox{curl}}
+\def\d{\mbox{d}}
+\def\-{\mbox{-}}
+%\def\loop{C_U}
+
+\def\r{\mathfrak{r}}
+\def\v{\mathfrak v}
+\def\l {\mathfrak l}
+\def\f{\mathfrak{f}}
+\def\labphi{\boldsymbol{\phi}}
+
+\def\bXi{\boldsymbol{\Xi}}
+
+\def\LieAlg{\mathfrak g}
+
+%mathfraks
+\newcommand{\mfu}{\mathfrak{u}}
+\newcommand{\mfU}{\mathfrak{U}}
+\newcommand{\mfB}{\mathfrak{B}}
+\newcommand{\mfF}{\mathfrak{F}}
+\newcommand{\mfI}{\mathfrak{I}}
+\newcommand{\mfT}{\mathfrak{T}}
+\newcommand{\mfn}{\mathfrak{n}}
+\newcommand{\mfo}{\mathfrak{o}}
+\newcommand{\mfe}{\mathfrak{e}}
+\newcommand{\mfN}{\mathfrak{N}}
+\newcommand{\mfL}{\mathfrak{L}}
+\newcommand{\mfd}{\mathfrak{d}}
+\newcommand{\mfa}{\mathfrak{a}}
+\newcommand{\mfc}{\mathfrak{c}}
+\newcommand{\mfA}{\mathfrak{A}}
+\newcommand{\mfC}{\mathfrak{C}}
+\newcommand{\mfR}{\mathfrak{R}}
+\newcommand{\mfr}{\mathfrak{r}}
+\newcommand{\mft}{\mathfrak{t}}
+\newcommand{\mfm}{\mathfrak{m}}
+\newcommand{\mfM}{\mathfrak{M}}
+\newcommand{\mfS}{\mathfrak{S}}
+\newcommand{\mfp}{\mathfrak{p}}
+\newcommand{\mfMO}{\mathfrak{MO}}
+\newcommand{\mfJ}{\mathfrak{J}}
+\newcommand{\mfl}{\mathfrak{l}}
+\newcommand{\mfz}{\mathfrak{z}}
+\newcommand{\mfh}{\mathfrak{h}}
+\newcommand{\mfq}{\mathfrak{q}}
+\newcommand{\mfb}{\mathfrak{b}}
+\newcommand{\mff}{\mathfrak{f}}
+\newcommand{\mfD}{\mathfrak{D}}
+\newcommand{\mfG}{\mathfrak{G}}
+\newcommand{\mfO}{\mathfrak{O}}
+\newcommand{\mfP}{\mathfrak{P}}
+\newcommand{\mfg}{\mathfrak{g}}
+\newcommand{\mfk}{\mathfrak{k}}
+\newcommand{\mfZ}{\mathfrak{Z}}
+\newcommand{\mfH}{\mathfrak{H}}
+\newcommand{\mfK}{\mathfrak{K}}
+%mathcals
+\newcommand{\mcO}{\mathcal{O}}
+\newcommand{\mcM}{\mathcal{M}}
+\newcommand{\mcE}{\mathcal{E}}
+\newcommand{\mcH}{\mathcal{H}}
+%\newcommand{\G}{\mathcal{G}}
+\newcommand{\U}{U}
+\newcommand{\mcA}{\mathcal{A}}
+\newcommand{\mcV}{\mathcal{V}}
+\newcommand{\mcR}{\mathcal{R}}
+\newcommand{\mcC}{\mathcal{C}}
+\newcommand{\mcB}{\mathcal{B}}
+\newcommand{\mcJ}{\mathcal{J}}
+\newcommand{\mcS}{\mathcal{S}}
+\newcommand{\mcU}{\mathcal{U}}
+\newcommand{\mcL}{\mathcal{L}}
+\newcommand{\mcT}{\mathcal{T}}
+\newcommand{\mcI}{\mathcal{I}}
+\newcommand{\mcF}{\mathcal{F}}
+\newcommand{\mcY}{\mathcal{Y}}
+\newcommand{\mcN}{\mathcal{N}}
+\newcommand{\mcK}{\mathcal{K}}
+\newcommand{\mcD}{\mathcal{D}}
+\newcommand{\mcW}{\mathcal{W}}
+\newcommand{\mcP}{\mathcal{P}}
+\newcommand{\mcG}{\mathcal{G}}
+\newcommand{\mcX}{\mathcal{X}}
+\newcommand{\mcQ}{\mathcal{Q}}
+\newcommand{\mcZ}{\mathcal{Z}}
+
+\def\symset{\mcb{s}}
+
+%mathbfs
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\mbo}{\mathbf{o}}
+\newcommand{\mba}{\mathbf{a}}
+\newcommand{\mbA}{\mathbf{A}}
+\newcommand{\mbC}{\mathbf{C}}
+\newcommand{\mbF}{\mathbf{F}}
+\newcommand{\mbD}{\mathbf{D}}
+\newcommand{\mbL}{\mathbf{L}}
+\newcommand{\mbK}{\mathbf{K}}
+\newcommand{\mbS}{\mathbf{S}}
+\newcommand{\mbW}{\mathbf{W}}
+\newcommand{\mbZ}{\mathbf{Z}}
+\newcommand{\mbY}{\mathbf{Y}}
+\newcommand{\mbX}{\mathbf{X}}
+\newcommand{\mbM}{\mathbf{M}}
+\newcommand{\mbn}{\mathbf{n}}
+\newcommand{\mbm}{\mathbf{m}}
+\newcommand{\mbj}{\mathbf{j}}
+\newcommand{\mbi}{\mathbf{i}}
+\newcommand{\mbk}{\mathbf{k}}
+\newcommand{\mbb}{\mathbf{b}}
+\newcommand{\mbp}{\mathbf{p}}
+\newcommand{\mbg}{\mathbf{g}}
+
+
+%mathrms
+\newcommand{\ch}{\mathrm{c}}
+\newcommand{\inte}{\mathrm{int}}
+\newcommand{\exte}{\mathrm{ext}}
+\newcommand{\ex}{\mathrm{ex}}
+\newcommand{\loc}{\mathrm{loc}}
+\newcommand{\CBH}{\mathrm{CBH}}
+\newcommand{\ad}{\mathrm{ad}}
+\newcommand{\Ad}{\mathrm{Ad}}
+\newcommand{\End}{\mathrm{End}}
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Coll}{\mathrm{Coll}}
+\newcommand{\Trace}{\mathrm{Tr}}
+\newcommand{\Haus}{\mathrm{H}}
+
+
+
+%mathscrs
+\def\cF{\mathscr{F}}
+\def\cX{\mathscr{X}}
+\def\cC{\mathscr{C}}
+\def\cA{\mathscr{A}}
+\def\cG{\mathscr{G}}
+\def\cH{\mathscr{H}}
+\def\cS{\mathscr{S}}
+\def\cD{\mathscr{D}}
+\def\cE{\mathscr{E}}
+\def\cB{\mathscr{B}}
+\def\cK{\mathscr{K}}
+\def\cT{\mathscr{T}}
+\def\cZ{\mathscr{Z}}
+
+
+\def\ST{\mathscr{T}}
+\newcommand{\VERT}{\vert\!\vert\!\vert}
+
+\DeclareMathOperator{\Ran}{Ran}
+\DeclareMathOperator{\sgn}{sgn}
+
+
+\def\divB{\nabla\!\cdot\! B}
+\def\cdota{\!\cdot\!}
+\def\cdota{\!\!\cdot\!\!}
+\def\sig{\boldsymbol{\sigma}}
+
+%\def\emptyset{\mathop{\centernot\ocircle}}
+\def\emptyset{{\centernot\Circle}}
+
+\def\diam{\mathrm{diam}}
+\def\act{\bigcdot}
+
+\def\bUpsilon{\boldsymbol{\Upsilon}}
+\def\bbUpsilon{\boldsymbol{\bar{\Upsilon}}}
+
+\def\Set{\mathop{\mathrm{Set}}\nolimits}
+\def\Hom{\mathord{\mathrm{Hom}}}
+\def\Homb{\mathord{\overline{\mathrm{Hom}}}}
+\def\VHomb{\mathord{\overline{\mathrm{SHom}}}}
+\def\Iso{\mathord{\mathrm{Iso}}}
+\def\TStruc{\mathord{\mathrm{TStruc}}}
+\def\SSet{\mathord{\mathrm{SSet}}}
+\def\Cas{\mathord{\mathrm{Cas}}}
+\def\Cov{\mathrm{Cov}}
+\def\bCov{\mathbf{Cov}}
+
+\def\Cech{\check{H}}
+\def\Rham{H_{\mathrm{dR}}}
+
+\DeclareMathOperator{\Cl}{C\ell}
+\DeclareMathOperator{\Spin}{Spin}
+\DeclareMathOperator{\SO}{SO}
+
+
+
+\newcommand{\fpar}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\spar}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+\newcommand{\mpar}[3]{\frac{\partial^2 #1}{\partial #2 \partial #3}}
+\newcommand{\tpar}[2]{\frac{\partial^3 #1}{\partial #2^3}}
+
+
+\numberwithin{equation}{section}
+
+
+\def\dash{\leavevmode\unskip\kern0.18em--\penalty\exhyphenpenalty\kern0.18em}
+\def\slash{\leavevmode\unskip\kern0.15em/\penalty\exhyphenpenalty\kern0.15em}
+
+
+\def\hstar{\mathbin{\hat{*}}}
+
+
+\let\f\frac
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%A Few Trees%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{shapes.symbols}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{snakes}
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.markings}
+
+\tikzset{
+	root/.style={circle,fill=testcolor,inner sep=0pt, minimum size=2mm},
+	dot/.style={circle,fill=symbols,draw=symbols,inner sep=0pt,minimum size=0.5mm},
+	bdot/.style={circle,fill=symbols,draw=symbols,inner sep=0pt,minimum size=1mm},
+	bdotsml/.style={circle,fill=symbols,draw=symbols,inner sep=0pt,minimum size=0.75mm},
+	square/.style={regular polygon,regular polygon sides=4,fill=black,draw=black,inner sep=0pt,minimum size=1.2mm},
+	wsquare/.style={regular polygon,regular polygon sides=4,fill=white,draw=black, inner sep=0pt,minimum size=1.2mm},
+	squaresml/.style={regular polygon,regular polygon sides=4,fill=black,draw=black,inner sep=0pt,minimum size=0.9mm},
+	wsquaresml/.style={regular polygon,regular polygon sides=4,fill=white,draw=black, inner sep=0pt,minimum size=0.9mm},
+	eps/.style={circle,fill=white,draw=symbols,inner sep=0pt,minimum size=1mm},
+	int/.style={circle,fill=black,draw=black,inner sep=0pt,minimum size=0.7mm},
+%	dot/.style={circle,fill=black,inner sep=0pt, minimum size=1mm},
+	var/.style={circle,fill=black!10,draw=black,inner sep=0pt, minimum size=2mm},
+	dotred/.style={circle,fill=black!50,inner sep=0pt, minimum size=2mm},
+	generic/.style={semithick,shorten >=1pt,shorten <=1pt},
+	dist/.style={ultra thick,draw=testcolor,shorten >=1pt,shorten <=1pt},
+	testfcn/.style={ultra thick,testcolor,shorten >=1pt,shorten <=1pt,<-},
+	testfcnx/.style={ultra thick,testcolor,shorten >=1pt,shorten <=1pt,<-,
+		postaction={decorate,decoration={markings,mark=at position 0.6 with {\drawx}}}},
+	keps/.style={semithick,shorten >=1pt,shorten <=1pt,densely dashed,->},
+	kprimex/.style={semithick,shorten >=1pt,shorten <=1pt,densely dashed,->,
+		postaction={decorate,decoration={markings,mark=at position 0.4 with {\drawx}}}},
+	kernel/.style={semithick,shorten >=1pt,shorten <=1pt,->},
+	multx/.style={shorten >=1pt,shorten <=1pt,
+		postaction={decorate,decoration={markings,mark=at position 0.5 with {\drawx}}}},
+	kernelx/.style={semithick,shorten >=1pt,shorten <=1pt,->,
+		postaction={decorate,decoration={markings,mark=at position 0.4 with {\drawx}}}},
+	kernel1/.style={->,semithick,shorten >=1pt,shorten <=1pt,postaction={decorate,decoration={markings,mark=at position 0.45 with {\draw[-] (0,-0.1) -- (0,0.1);}}}},
+	kernel2/.style={->,semithick,shorten >=1pt,shorten <=1pt,postaction={decorate,decoration={markings,mark=at position 0.45 with {\draw[-] (0.05,-0.1) -- (0.05,0.1);\draw[-] (-0.05,-0.1) -- (-0.05,0.1);}}}},
+	kernelBig/.style={semithick,shorten >=1pt,shorten <=1pt,decorate, decoration={zigzag,amplitude=1.5pt,segment length = 3pt,pre length=2pt,post length=2pt}},
+	rho/.style={dotted,semithick,shorten >=1pt,shorten <=1pt},
+	renorm/.style={shape=circle,fill=white,inner sep=1pt},
+	labl/.style={shape=rectangle,fill=white,inner sep=1pt},
+	xi/.style={circle,fill=symbols!10,draw=symbols,inner sep=0pt,minimum size=1.2mm},
+	xix/.style={crosscircle,fill=symbols!10,draw=symbols,inner sep=0pt,minimum size=1.2mm},
+	xib/.style={circle,fill=symbols!10,draw=symbols,inner sep=0pt,minimum size=1.6mm},
+	xibx/.style={crosscircle,fill=symbols!10,draw=symbols,inner sep=0pt,minimum size=1.6mm},
+	not/.style={circle,fill=symbols,draw=symbols,inner sep=0pt,minimum size=0.5mm},
+cumu2n/.style={inner sep=3pt},
+cumu2/.style={draw=red!80,fill=red!40},
+cumu2b/.style={draw=blue!80,fill=blue!40},
+cumu2nv/.style={inner sep=3pt},
+cumu2v/.style={draw=red!80,fill=white,very thick},
+cumu3/.style={regular polygon, regular polygon sides=3,draw=red!80,rounded corners=3pt,fill=red!40,minimum size=5mm},
+cumu4/.style={regular polygon, regular polygon sides=4,draw=red!80,rounded corners=3pt,fill=red!40,minimum size=7mm},
+cumu5/.style={regular polygon, regular polygon sides=5,draw=red!80,rounded corners=3pt,fill=red!40,minimum size=7mm},
+	>=stealth,
+	}
+\makeatletter
+\def\DeclareSymbol#1#2#3{\expandafter\gdef\csname MH@symb@#1\endcsname{\tikz[baseline=#2,scale=0.15,draw=symbols]{#3}}}
+\def\<#1>{\csname MH@symb@#1\endcsname}
+\makeatother
+
+
+\DeclareSymbol{1}{0}{ \draw (0,0)  -- (0,1.5) node[bdot] {};} %Integrated Bosonic Noise
+\DeclareSymbol{1F}{0}{\draw[black] (0,0)  -- (0,1.5) node[square] {}; \draw[black] (-0.22,0.75) -- (0.22,0.75);} %Integrated Fermionic noise with derivate
+\DeclareSymbol{1IF}{0}{ \draw[black] (0,0)  -- (0,1.5) node[square] {};} %Integrated Fermionic noise without derivate
+\DeclareSymbol{1A}{0}{\draw[black] (0,0)  -- (0,1.5) node[wsquare] {}; \draw[black] (-0.22,0.75) -- (0.22,0.75);} %Integrated Anti-Fermionic noise with derivate
+%\DeclareSymbol{1A}{0}{\draw[white] (-.5,0) -- (.5,0); \draw[black] (0,0)  -- (0,1.325) ;\draw[black] (-0.22,0.75) -- (0.22,0.75);\draw[black] (-0.175,1.325) rectangle ++(0.35,0.35)} %Integrated Anti-Fermionic noise with derivate
+\DeclareSymbol{1IA}{0}{ \draw[black] (0,0)  -- (0,1.5) node[wsquare] {};} %Integrated Anti-Fermionic noise without derivate
+
+\DeclareSymbol{1IA}{0}{\draw[black] (0,0)  -- (0,1.5) node[wsquare] {};} %Integrated Anti-Fermionic noise without derivate
+%\DeclareSymbol{1IA}{0}{\draw[white] (-.5,0) -- (.5,0); \draw[black] (0,0)  -- (0,1.325) ;\draw[black] (-0.175,1.325) rectangle ++(0.35,0.35)}		%Integrated Anti-Fermionic noise without derivate
+\DeclareSymbol{2}{0}{\draw (-0.75,1.5) node[bdot] {} -- (0,0) -- (0.75,1.5) node[bdot] {};}
+\DeclareSymbol{2F}{0}{\draw (-0.75,1.5) node[bdot] {} -- (0,0); \draw[black] (0,0) -- (0.75,1.5) node[square] {};
+\draw[black] (0.571774, 0.651613) -- (0.178226, 0.848387);
+}
+\DeclareSymbol{2A}{0}{\draw (-0.75,1.5) node[bdot] {} -- (0,0); \draw[black] (0,0) -- (0.75,1.5) node[wsquare] {};
+\draw[black] (0.571774, 0.651613) -- (0.178226, 0.848387);
+}
+\DeclareSymbol{2AF}{0}{\draw[black] (-0.75,1.5) node[wsquare] {} -- (0,0); \draw[black] (0,0) -- (0.75,1.5) node[square] {};
+\draw[black] (0.571774, 0.651613) -- (0.178226, 0.848387);
+\draw[black] (-0.571774, 0.651613) -- (-0.178226, 0.848387);
+}
+
+
+\DeclareSymbol{2F2A}{-3}{\draw[black] (.55,0) node[squaresml] {} -- (0,-1); \draw[black] (0,-1) -- (-.55,0) ;  \draw (-1.1,1) node[bdotsml] {} -- (-0.55,0) ; \draw[black] (-0.55,0) -- (0,1) node[wsquaresml] {};
+\draw[black] (0.0997568, -0.403616) -- (0.450243, -0.596384);
+\draw[black] (-0.0997568, -0.403616) -- (-0.450243, -0.596384);
+\draw[black] (-0.0997568, 0.403616) -- (-0.450243, 0.596384);
+}
+
+
+\DeclareSymbol{1F2A}{-3}{\draw[black] (.55,0) node[squaresml] {} -- (0,-1); \draw[black] (0,-1) -- (-.55,0) ; \draw[black] (-0.55,0) -- (0,1) node[wsquaresml] {};
+\draw[black] (0.0997568, -0.403616) -- (0.450243, -0.596384);
+\draw[black] (-0.0997568, -0.403616) -- (-0.450243, -0.596384);
+\draw[black] (-0.0997568, 0.403616) -- (-0.450243, 0.596384);
+}
+
+\DeclareSymbol{2A2F}{-3}{\draw[black] (-.55,0) node[wsquaresml] {} -- (0,-1); \draw[black] (0,-1) -- (.55,0) ;  \draw[black] (1.1,1) node[squaresml] {} -- (0.55,0) ; \draw (0.55,0) -- (0,1) node[bdotsml] {};
+\draw[black] (0.0997568, -0.403616) -- (0.450243, -0.596384);
+\draw[black] (-0.0997568, -0.403616) -- (-0.450243, -0.596384);
+\draw[black] (0.649757, 0.596384) -- (1.00024, 0.403616);
+}
+
+\DeclareSymbol{1A2F}{-3}{\draw[black] (-.55,0) node[wsquaresml] {} -- (0,-1); \draw[black] (0,-1) -- (.55,0) ;  \draw[black] (1.1,1) node[squaresml] {} -- (0.55,0) ; 
+\draw[black] (0.0997568, -0.403616) -- (0.450243, -0.596384);
+\draw[black] (-0.0997568, -0.403616) -- (-0.450243, -0.596384);
+\draw[black] (0.649757, 0.596384) -- (1.00024, 0.403616);
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\makeatletter
+
+\DeclareRobustCommand{\TitleEquation}[2]{\texorpdfstring{\StrLeft{\f@series}{1}[\@firstchar]$\if%
+b\@firstchar\boldsymbol{#1}\else#1\fi$}{#2}}
+
+\makeatother
+
+
+
+\begin{document}
+%
+
+\title{A $C^*$-Theoretic Anomaly Calculation}
+
+\author[1, 2]{Akshunna S. Dogra\footnote{adogra@nyu.edu}}
+\affil[1] {\small Department of Mathematics, Imperial College London}
+\affil[2] {\small EPSRC CDT in Mathematics of Random Systems: Analysis, Modelling and Simulation}
+\institute{Imperial College London}
+
+\maketitle
+
+
+\begin{abstract}
+In this essay we go over the proof of the isomorphism between the $\check{\mathrm{C}}$ cohomology
+ \TitleEquation{\Cech(M;\R)}{2}
+ and the de Rham cohomology \TitleEquation{\Rham(M;\R)}{2} 
+ of a smooth manifold $M$.
+\end{abstract}
+
+
+\begin{defn}
+    \begin{itemize}
+        \item $\cA^p$ sheaf of smooth $p$-forms on $M$
+        \item $\cZ^p$ sheaf of closed $p$-forms on $M$
+    \end{itemize}
+\end{defn}
+
+\begin{lemma}
+    For $p > 0$ and all $q\geqslant 0$, the $\check{\mathrm{C}}$ech cohomology groups of the sheaves $\cA^q$ are trivial, i.e. $\Cech^p(M,\cA^q) = 0$. 
+\end{lemma}
+
+
+\begin{lemma}
+    The sheaf cochain complex 
+    \[
+        \begin{diagram}
+            \node{0} \arrow{e,t}{} \node{\R} \arrow{e,t}{} \node{\cA^0} \arrow{e,t}{d} \node{\cA^1} \arrow{e,t}{d}\node{\cA^2} \arrow{e,t}{d} \node{\cdots}
+        \end{diagram}
+    \]
+    is exact, that is it splits into short exact sequences
+    \begin{gather*}
+        \begin{diagram}
+            \node{0} \arrow{e,t}{} \node{\R} \arrow{e,t}{} \node{\cA^0} \arrow{e,t}{d} \node{\cZ^1} \arrow{e,t}{}\node{0}
+        \end{diagram}\\
+        \vdots\\
+        \begin{diagram}
+            \node{0} \arrow{e,t}{} \node{\cZ^{p}} \arrow{e,t,J}{} \node{\cA^p} \arrow{e,t}{d} \node{\cZ^{p+1}} \arrow{e,t}{}\node{0}
+        \end{diagram}\\
+        \vdots
+    \end{gather*}
+\end{lemma}
+\begin{proof}
+    By definition, the cochain complex is exact iff it is exact on stalks. Thus, it suffices to prove that for every $x \in M$ there exists $ x\in U \subset M$ open and sufficiently small, s.t.\ 
+    \[
+            \begin{diagram}
+                \node{\cdots} \arrow{e,t}{} \node{\cA^{p-1}(U)} \arrow{e,t}{d} \node{\cA^p(U)} \arrow{e,t}{d}\node{\cA^{p+1}(U)} \arrow{e,t}{d} \node{\cdots}
+            \end{diagram}   
+    \]
+    is exact as a cochain complex of Abelian groups. However, this exactly the content of the classical Poincar\'e Lemma, see for example \cite[Theorem~17.14]{Lee12}. If $U$ is diffeomorphic to a star-shaped open subset of $\R^n$, e.g.\ diffeomorphic via a chart to an open ball, then every closed differential form is exact. 
+\end{proof}
+
+
+
+
+
+
+\bibliographystyle{Martin}
+\bibliography{./refs}
+
+
+
+
+\end{document}
