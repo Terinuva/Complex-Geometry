@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.15)  16 MAR 2022 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.15)  24 APR 2022 20:11
 entering extended mode
 **"d:/University/Mathematics/14th Semester/Complex Geometry/CG_Aksh.tex"
 ("d:/University/Mathematics/14th Semester/Complex Geometry/CG_Aksh.tex"
@@ -895,7 +895,7 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
 )
 \symtimesoperators=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `timesoperators' in version `bold'
-(Font)                  T1/ptm/m/n --> T1/ptm/b/n on input line 59.
+(Font)                  T1/ptm/m/n --> T1/ptm/b/n on input line 60.
  (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.misc.code.tex
 File: tikzlibraryshapes.misc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.misc.code.tex
@@ -929,9 +929,9 @@ Package pgf Warning: Snakes have been superseded by decorations. Please use the 
 File: tikzlibrarycalc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ) (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer/libraries\tikzlibraryexternal.code.tex (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzexternalshared.code.tex))
 LaTeX Font Info:    Overwriting math alphabet `\mcb' in version `bold'
-(Font)                  U/BOONDOX-calo/m/n --> U/BOONDOX-calo/b/n on input line 120.
-LaTeX Info: Redefining \bigcdot on input line 129.
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 620.
+(Font)                  U/BOONDOX-calo/m/n --> U/BOONDOX-calo/b/n on input line 121.
+LaTeX Info: Redefining \bigcdot on input line 130.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 507.
  (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
@@ -941,25 +941,25 @@ File: l3backend-pdftex.def 2021-02-06 L3 backend support: PDF output (pdfTeX)
 ) ("d:/University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.aux")
 \openout1 = `CG_Aksh.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 620.
-LaTeX Font Info:    ... okay on input line 620.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 620.
-LaTeX Font Info:    ... okay on input line 620.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 620.
-LaTeX Font Info:    ... okay on input line 620.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 620.
-LaTeX Font Info:    ... okay on input line 620.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 620.
-LaTeX Font Info:    ... okay on input line 620.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 620.
-LaTeX Font Info:    ... okay on input line 620.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 620.
-LaTeX Font Info:    ... okay on input line 620.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 620.
-LaTeX Font Info:    ... okay on input line 620.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 620.
-LaTeX Font Info:    ... okay on input line 620.
-Package hyperref Info: Link coloring OFF on input line 620.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 507.
+LaTeX Font Info:    ... okay on input line 507.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 507.
+LaTeX Font Info:    ... okay on input line 507.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 507.
+LaTeX Font Info:    ... okay on input line 507.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 507.
+LaTeX Font Info:    ... okay on input line 507.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 507.
+LaTeX Font Info:    ... okay on input line 507.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 507.
+LaTeX Font Info:    ... okay on input line 507.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 507.
+LaTeX Font Info:    ... okay on input line 507.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 507.
+LaTeX Font Info:    ... okay on input line 507.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 507.
+LaTeX Font Info:    ... okay on input line 507.
+Package hyperref Info: Link coloring OFF on input line 507.
  (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -969,9 +969,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count403
 )
-LaTeX Info: Redefining \ref on input line 620.
-LaTeX Info: Redefining \pageref on input line 620.
-LaTeX Info: Redefining \nameref on input line 620.
+LaTeX Info: Redefining \ref on input line 507.
+LaTeX Info: Redefining \pageref on input line 507.
+LaTeX Info: Redefining \nameref on input line 507.
  ("d:/University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.out") ("d:/University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.out")
 \@outlinefile=\write8
 \openout8 = `CG_Aksh.out'.
@@ -993,14 +993,14 @@ LaTeX Info: Redefining \nameref on input line 620.
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 )
-LaTeX Info: Redefining \microtypecontext on input line 620.
+LaTeX Info: Redefining \microtypecontext on input line 507.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 620.
+LaTeX Info: Redefining \showhyphens on input line 507.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1009,51 +1009,117 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 ) (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 620.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 507.
  (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 620.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 507.
  (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 620.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 507.
  (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 620.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 507.
  (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 620.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 507.
  (C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-Package xypdf Info: Line width: 0.43799pt on input line 620.
+Package xypdf Info: Line width: 0.43799pt on input line 507.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 630.
+Package hyperref Warning: Ignoring empty anchor on input line 517.
 
-[diagram 1 . . . ] [diagram 2 . . . ] [diagram 3 . . . ] [diagram 4 . . . ] [diagram 5 . . . ] [diagram 6 . . . ] [1
 
-{C:/Users/Terinuva/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] ("d:/University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.bbl") [2] ("d:/University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.aux")
+Overfull \hbox (3.67471pt too wide) in paragraph at lines 548--550
+\OT1/ptm/m/n/10.95 (-20) for any com-bi-na-tion of $\OML/cmm/m/it/10.95 p$ \OT1/ptm/m/n/10.95 (-20) dis-tinct in-dices $\OML/cmm/m/it/10.95 []; [] ; [] \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 I$\OT1/ptm/m/n/10.95 (-20) . For in-dices $\OML/cmm/m/it/10.95 []; [] ; [] \OMS/cmsy/m/n/10.95 2|
+
+\hbox(7.48248+3.19804)x360.0, glue set - 1.0
+.\OT1/ptm/m/n/10.95 (-20) f
+.\OT1/ptm/m/n/10.95 (-20) o
+.\OT1/ptm/m/n/10.95 (-20) r
+.\glue 2.73749 plus 1.64249 minus 0.65698
+.\OT1/ptm/m/n/10.95 (-20) a
+.\OT1/ptm/m/n/10.95 (-20) n
+.\kern-0.16415
+.\OT1/ptm/m/n/10.95 (-20) y
+.\glue 2.73749 plus 1.64249 minus 0.65698
+.\OT1/ptm/m/n/10.95 (-20) c
+.\OT1/ptm/m/n/10.95 (-20) o
+.\OT1/ptm/m/n/10.95 (-20) m
+.\discretionary
+..\OT1/ptm/m/n/10.95 (-20) -
+.\OT1/ptm/m/n/10.95 (-20) b
+.\OT1/ptm/m/n/10.95 (-20) i
+.\discretionary
+..\OT1/ptm/m/n/10.95 (-20) -
+.\OT1/ptm/m/n/10.95 (-20) n
+.\OT1/ptm/m/n/10.95 (-20) a
+.\discretionary
+..\OT1/ptm/m/n/10.95 (-20) -
+.\OT1/ptm/m/n/10.95 (-20) t
+.\OT1/ptm/m/n/10.95 (-20) i
+.\OT1/ptm/m/n/10.95 (-20) o
+.\OT1/ptm/m/n/10.95 (-20) n
+.\glue 2.73749 plus 1.64249 minus 0.65698
+.\OT1/ptm/m/n/10.95 (-20) o
+.\OT1/ptm/m/n/10.95 (-20) f
+.\glue 2.73749 plus 1.64249 minus 0.65698
+.\mathon
+.\OML/cmm/m/it/10.95 p
+.\mathoff
+.\glue 2.73749 plus 1.64249 minus 0.65698
+.\OT1/ptm/m/n/10.95 (-20) d
+.\OT1/ptm/m/n/10.95 (-20) i
+.\OT1/ptm/m/n/10.95 (-20) s
+.\discretionary
+..\OT1/ptm/m/n/10.95 (-20) -
+.\OT1/ptm/m/n/10.95 (-20) t
+.\OT1/ptm/m/n/10.95 (-20) i
+.\OT1/ptm/m/n/10.95 (-20) n
+.\OT1/ptm/m/n/10.95 (-20) c
+.\OT1/ptm/m/n/10.95 (-20) t
+.\glue 2.73749 plus 1.64249 minus 0.65698
+.\OT1/ptm/m/n/10.95 (-20) i
+.\OT1/ptm/m/n/10.95 (-20) n
+.\discretionary
+..\OT1/ptm/m/n/10.95 (-20) -
+.\OT1/ptm/m/n/10.95 (-20) d
+.\OT1/ptm/m/n/10.95 (-20) i
+.\OT1/ptm/m/n/10.95 (-20) c
+.\OT1/ptm/m/n/10.95 (-20) e
+.\OT1/ptm/m/n/10.95 (-20) s
+.\glue 2.73749 plus 1.64249 minus 0.65698
+.etc.
+
+[1
+
+{C:/Users/Terinuva/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [diagram 1 . . . ] [diagram 2 . . . ] [diagram 3 . . . ] [diagram 4 . . . ] [diagram 5 . . . ] [diagram 6 . . . ] [2]
+
+Package hyperref Warning: No autoref name for `lemma' on input line 616.
+
+("d:/University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.bbl") [3] ("d:/University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.aux")
 Package rerunfilecheck Info: File `CG_Aksh.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31572 strings out of 479578
- 589084 string characters out of 2861827
- 985502 words of memory out of 3000000
- 47894 multiletter control sequences out of 15000+200000
- 463068 words of font info for 235 fonts, out of 3000000 for 9000
+ 31472 strings out of 479578
+ 586807 string characters out of 2861827
+ 978526 words of memory out of 3000000
+ 47785 multiletter control sequences out of 15000+200000
+ 459805 words of font info for 231 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,32n,116p,903b,649s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/xypic/xybsql10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/xypic/xycmat10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on "d:/University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.pdf" (2 pages, 128212 bytes).
+ 113i,32n,116p,903b,652s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/xypic/xybsql10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/xypic/xycmat10.pfb><C:/Users/Terinuva/AppData/Local/Programs/MiKTeX/fonts/type1/public/xypic/xycmbt10.pfb>
+Output written on "d:/University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.pdf" (3 pages, 177234 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
- 80397 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 113 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 500000)
+ 77837 words of extra memory for PDF output out of 89155 (max. 10000000)
 

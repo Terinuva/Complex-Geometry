@@ -38,6 +38,7 @@
 \usepackage{titlesec}
 \usepackage{authblk}
 \usepackage{mleftright}
+%\usepackage[margin=1in]{geometry}
 
 
 %%%%Commutative Diagram Package%%%%
@@ -429,6 +430,7 @@
 \newcommand{\VERT}{\vert\!\vert\!\vert}
 
 \DeclareMathOperator{\Ran}{Ran}
+\DeclareMathOperator{\im}{im}
 \DeclareMathOperator{\sgn}{sgn}
 
 
@@ -485,121 +487,6 @@
 \let\f\frac
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%A Few Trees%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-\usetikzlibrary{calc}
-\usetikzlibrary{shapes.misc}
-\usetikzlibrary{shapes.symbols}
-\usetikzlibrary{shapes.geometric}
-\usetikzlibrary{snakes}
-\usetikzlibrary{decorations}
-\usetikzlibrary{decorations.markings}
-
-\tikzset{
-	root/.style={circle,fill=testcolor,inner sep=0pt, minimum size=2mm},
-	dot/.style={circle,fill=symbols,draw=symbols,inner sep=0pt,minimum size=0.5mm},
-	bdot/.style={circle,fill=symbols,draw=symbols,inner sep=0pt,minimum size=1mm},
-	bdotsml/.style={circle,fill=symbols,draw=symbols,inner sep=0pt,minimum size=0.75mm},
-	square/.style={regular polygon,regular polygon sides=4,fill=black,draw=black,inner sep=0pt,minimum size=1.2mm},
-	wsquare/.style={regular polygon,regular polygon sides=4,fill=white,draw=black, inner sep=0pt,minimum size=1.2mm},
-	squaresml/.style={regular polygon,regular polygon sides=4,fill=black,draw=black,inner sep=0pt,minimum size=0.9mm},
-	wsquaresml/.style={regular polygon,regular polygon sides=4,fill=white,draw=black, inner sep=0pt,minimum size=0.9mm},
-	eps/.style={circle,fill=white,draw=symbols,inner sep=0pt,minimum size=1mm},
-	int/.style={circle,fill=black,draw=black,inner sep=0pt,minimum size=0.7mm},
-%	dot/.style={circle,fill=black,inner sep=0pt, minimum size=1mm},
-	var/.style={circle,fill=black!10,draw=black,inner sep=0pt, minimum size=2mm},
-	dotred/.style={circle,fill=black!50,inner sep=0pt, minimum size=2mm},
-	generic/.style={semithick,shorten >=1pt,shorten <=1pt},
-	dist/.style={ultra thick,draw=testcolor,shorten >=1pt,shorten <=1pt},
-	testfcn/.style={ultra thick,testcolor,shorten >=1pt,shorten <=1pt,<-},
-	testfcnx/.style={ultra thick,testcolor,shorten >=1pt,shorten <=1pt,<-,
-		postaction={decorate,decoration={markings,mark=at position 0.6 with {\drawx}}}},
-	keps/.style={semithick,shorten >=1pt,shorten <=1pt,densely dashed,->},
-	kprimex/.style={semithick,shorten >=1pt,shorten <=1pt,densely dashed,->,
-		postaction={decorate,decoration={markings,mark=at position 0.4 with {\drawx}}}},
-	kernel/.style={semithick,shorten >=1pt,shorten <=1pt,->},
-	multx/.style={shorten >=1pt,shorten <=1pt,
-		postaction={decorate,decoration={markings,mark=at position 0.5 with {\drawx}}}},
-	kernelx/.style={semithick,shorten >=1pt,shorten <=1pt,->,
-		postaction={decorate,decoration={markings,mark=at position 0.4 with {\drawx}}}},
-	kernel1/.style={->,semithick,shorten >=1pt,shorten <=1pt,postaction={decorate,decoration={markings,mark=at position 0.45 with {\draw[-] (0,-0.1) -- (0,0.1);}}}},
-	kernel2/.style={->,semithick,shorten >=1pt,shorten <=1pt,postaction={decorate,decoration={markings,mark=at position 0.45 with {\draw[-] (0.05,-0.1) -- (0.05,0.1);\draw[-] (-0.05,-0.1) -- (-0.05,0.1);}}}},
-	kernelBig/.style={semithick,shorten >=1pt,shorten <=1pt,decorate, decoration={zigzag,amplitude=1.5pt,segment length = 3pt,pre length=2pt,post length=2pt}},
-	rho/.style={dotted,semithick,shorten >=1pt,shorten <=1pt},
-	renorm/.style={shape=circle,fill=white,inner sep=1pt},
-	labl/.style={shape=rectangle,fill=white,inner sep=1pt},
-	xi/.style={circle,fill=symbols!10,draw=symbols,inner sep=0pt,minimum size=1.2mm},
-	xix/.style={crosscircle,fill=symbols!10,draw=symbols,inner sep=0pt,minimum size=1.2mm},
-	xib/.style={circle,fill=symbols!10,draw=symbols,inner sep=0pt,minimum size=1.6mm},
-	xibx/.style={crosscircle,fill=symbols!10,draw=symbols,inner sep=0pt,minimum size=1.6mm},
-	not/.style={circle,fill=symbols,draw=symbols,inner sep=0pt,minimum size=0.5mm},
-cumu2n/.style={inner sep=3pt},
-cumu2/.style={draw=red!80,fill=red!40},
-cumu2b/.style={draw=blue!80,fill=blue!40},
-cumu2nv/.style={inner sep=3pt},
-cumu2v/.style={draw=red!80,fill=white,very thick},
-cumu3/.style={regular polygon, regular polygon sides=3,draw=red!80,rounded corners=3pt,fill=red!40,minimum size=5mm},
-cumu4/.style={regular polygon, regular polygon sides=4,draw=red!80,rounded corners=3pt,fill=red!40,minimum size=7mm},
-cumu5/.style={regular polygon, regular polygon sides=5,draw=red!80,rounded corners=3pt,fill=red!40,minimum size=7mm},
-	>=stealth,
-	}
-\makeatletter
-\def\DeclareSymbol#1#2#3{\expandafter\gdef\csname MH@symb@#1\endcsname{\tikz[baseline=#2,scale=0.15,draw=symbols]{#3}}}
-\def\<#1>{\csname MH@symb@#1\endcsname}
-\makeatother
-
-
-\DeclareSymbol{1}{0}{ \draw (0,0)  -- (0,1.5) node[bdot] {};} %Integrated Bosonic Noise
-\DeclareSymbol{1F}{0}{\draw[black] (0,0)  -- (0,1.5) node[square] {}; \draw[black] (-0.22,0.75) -- (0.22,0.75);} %Integrated Fermionic noise with derivate
-\DeclareSymbol{1IF}{0}{ \draw[black] (0,0)  -- (0,1.5) node[square] {};} %Integrated Fermionic noise without derivate
-\DeclareSymbol{1A}{0}{\draw[black] (0,0)  -- (0,1.5) node[wsquare] {}; \draw[black] (-0.22,0.75) -- (0.22,0.75);} %Integrated Anti-Fermionic noise with derivate
-%\DeclareSymbol{1A}{0}{\draw[white] (-.5,0) -- (.5,0); \draw[black] (0,0)  -- (0,1.325) ;\draw[black] (-0.22,0.75) -- (0.22,0.75);\draw[black] (-0.175,1.325) rectangle ++(0.35,0.35)} %Integrated Anti-Fermionic noise with derivate
-\DeclareSymbol{1IA}{0}{ \draw[black] (0,0)  -- (0,1.5) node[wsquare] {};} %Integrated Anti-Fermionic noise without derivate
-
-\DeclareSymbol{1IA}{0}{\draw[black] (0,0)  -- (0,1.5) node[wsquare] {};} %Integrated Anti-Fermionic noise without derivate
-%\DeclareSymbol{1IA}{0}{\draw[white] (-.5,0) -- (.5,0); \draw[black] (0,0)  -- (0,1.325) ;\draw[black] (-0.175,1.325) rectangle ++(0.35,0.35)}		%Integrated Anti-Fermionic noise without derivate
-\DeclareSymbol{2}{0}{\draw (-0.75,1.5) node[bdot] {} -- (0,0) -- (0.75,1.5) node[bdot] {};}
-\DeclareSymbol{2F}{0}{\draw (-0.75,1.5) node[bdot] {} -- (0,0); \draw[black] (0,0) -- (0.75,1.5) node[square] {};
-\draw[black] (0.571774, 0.651613) -- (0.178226, 0.848387);
-}
-\DeclareSymbol{2A}{0}{\draw (-0.75,1.5) node[bdot] {} -- (0,0); \draw[black] (0,0) -- (0.75,1.5) node[wsquare] {};
-\draw[black] (0.571774, 0.651613) -- (0.178226, 0.848387);
-}
-\DeclareSymbol{2AF}{0}{\draw[black] (-0.75,1.5) node[wsquare] {} -- (0,0); \draw[black] (0,0) -- (0.75,1.5) node[square] {};
-\draw[black] (0.571774, 0.651613) -- (0.178226, 0.848387);
-\draw[black] (-0.571774, 0.651613) -- (-0.178226, 0.848387);
-}
-
-
-\DeclareSymbol{2F2A}{-3}{\draw[black] (.55,0) node[squaresml] {} -- (0,-1); \draw[black] (0,-1) -- (-.55,0) ;  \draw (-1.1,1) node[bdotsml] {} -- (-0.55,0) ; \draw[black] (-0.55,0) -- (0,1) node[wsquaresml] {};
-\draw[black] (0.0997568, -0.403616) -- (0.450243, -0.596384);
-\draw[black] (-0.0997568, -0.403616) -- (-0.450243, -0.596384);
-\draw[black] (-0.0997568, 0.403616) -- (-0.450243, 0.596384);
-}
-
-
-\DeclareSymbol{1F2A}{-3}{\draw[black] (.55,0) node[squaresml] {} -- (0,-1); \draw[black] (0,-1) -- (-.55,0) ; \draw[black] (-0.55,0) -- (0,1) node[wsquaresml] {};
-\draw[black] (0.0997568, -0.403616) -- (0.450243, -0.596384);
-\draw[black] (-0.0997568, -0.403616) -- (-0.450243, -0.596384);
-\draw[black] (-0.0997568, 0.403616) -- (-0.450243, 0.596384);
-}
-
-\DeclareSymbol{2A2F}{-3}{\draw[black] (-.55,0) node[wsquaresml] {} -- (0,-1); \draw[black] (0,-1) -- (.55,0) ;  \draw[black] (1.1,1) node[squaresml] {} -- (0.55,0) ; \draw (0.55,0) -- (0,1) node[bdotsml] {};
-\draw[black] (0.0997568, -0.403616) -- (0.450243, -0.596384);
-\draw[black] (-0.0997568, -0.403616) -- (-0.450243, -0.596384);
-\draw[black] (0.649757, 0.596384) -- (1.00024, 0.403616);
-}
-
-\DeclareSymbol{1A2F}{-3}{\draw[black] (-.55,0) node[wsquaresml] {} -- (0,-1); \draw[black] (0,-1) -- (.55,0) ;  \draw[black] (1.1,1) node[squaresml] {} -- (0.55,0) ; 
-\draw[black] (0.0997568, -0.403616) -- (0.450243, -0.596384);
-\draw[black] (-0.0997568, -0.403616) -- (-0.450243, -0.596384);
-\draw[black] (0.649757, 0.596384) -- (1.00024, 0.403616);
-}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -620,7 +507,7 @@ b\@firstchar\boldsymbol{#1}\else#1\fi$}{#2}}
 \begin{document}
 %
 
-\title{A $C^*$-Theoretic Anomaly Calculation}
+\title{Complex Geometry Project}
 
 \author[1, 2]{Akshunna S. Dogra\footnote{adogra@nyu.edu}}
 \affil[1] {\small Department of Mathematics, Imperial College London}
@@ -631,7 +518,7 @@ b\@firstchar\boldsymbol{#1}\else#1\fi$}{#2}}
 
 
 \begin{abstract}
-In this essay we go over the proof of the isomorphism between the $\check{\mathrm{C}}$ cohomology
+In this essay we go over the proof of the isomorphism between the $\check{\mathrm{C}}$ech cohomology
  \TitleEquation{\Cech(M;\R)}{2}
  and the de Rham cohomology \TitleEquation{\Rham(M;\R)}{2} 
  of a smooth manifold $M$.
@@ -644,13 +531,52 @@ In this essay we go over the proof of the isomorphism between the $\check{\mathr
         \item $\cZ^p$ sheaf of closed $p$-forms on $M$
     \end{itemize}
 \end{defn}
+\begin{remark}
+  For $p = 0$, $\cZ^0$ is simply the constant sheaf $\underline{\R}$.
+\end{remark}
 
 \begin{lemma}
     For $p > 0$ and all $q\geqslant 0$, the $\check{\mathrm{C}}$ech cohomology groups of the sheaves $\cA^q$ are trivial, i.e. $\Cech^p(M,\cA^q) = 0$. 
 \end{lemma}
+\begin{proof}
+  It is enough to prove that this holds for any locally finite cover $\CU$ of $M$. Let $\CU = \left( U_\alpha\right)_{\alpha \in I}$ be such a cover and let $\left(\rho_\alpha\right)_{\alpha \in I}$ be a corresponding subordinate, i.e.\ $\supp(\rho_\alpha) \subset U_\alpha$, partition of unity.
+
+  Let $\omega \in Z^p(\CU, \cA^q)$ we have to find a $\psi \in C^{p-1}(\CU, \cA^q)$ such that $d \psi = \omega$. %To simplify the argument, we shall first assume that $ \supp \omega \subset U$ for some fixed $U \in \CU$.
+  $\omega$ consists of a collection of maps 
+  \[
+      \omega_{\alpha_1 \cdots \alpha_p} : \bigcap_{i = 1}^n U_{\alpha_i} \longrightarrow \cA^q \left( \bigcap_{i = 1}^n U_{\alpha_i} \right)
+  \]
+  for any combination of $p$ distinct indices $\alpha_1, \dots, \alpha_p \in I$. For indices $\alpha_1, \dots, \alpha_{p-1} \in I$ we define $\psi$ to be
+  \[
+    \psi_{\alpha_1 \cdots \alpha_{p-1}} = \sum_{\beta \in I} \rho_\beta \omega_{\beta\alpha_1 \cdots \alpha_{p-1}}.
+  \]
+  We have to prove that $\omega = d \psi$. On $\bigcap_{i = 1}^p U_{\alpha_i}$
+  \begin{align*}
+    \left(d \psi\right)_{\alpha_1 \cdots \alpha_{p}} &= - \sum_{i = 1}^p (-1)^i \psi_{\alpha_1 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}}  \\
+    & = - \sum_{i = 1}^p \sum_{\beta \in I} (-1)^i \rho_\beta \big|_{U_{\alpha_i}} \omega_{\beta\alpha_1 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}}  \\
+    & = - \sum_{i = 1}^p \sum_{\beta \in I} (-1)^i \rho_\beta \big|_{\bigcap_{j = 1}^p U_{\alpha_j}} \omega_{\beta\alpha_1 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}}  \\
+    & = - \sum_{\beta \in I} \rho_\beta \big|_{\bigcap_{j = 1}^p U_{\alpha_j}}  \sum_{i = 1}^p (-1)^i \omega_{\beta\alpha_1 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}} \\
+    & = \sum_{\beta \in I} \rho_\beta \big|_{\bigcap_{j = 1}^p U_{\alpha_j}}   \omega_{\alpha_1  \cdots \alpha_p} \big|_{U_{\beta}} \\
+    & = \sum_{\beta \in I} \rho_\beta  \omega_{\alpha_1  \cdots \alpha_p} =\omega_{\alpha_1  \cdots \alpha_p} .
+  \end{align*}
+  where in the third line we used that on $ \bigcap_{i = 1}^n U_{\alpha_i}$ and all $i \in \{1,\dots, p\}$
+  \[
+      \rho_\beta \big|_{\bigcap_{j = 1}^p U_{\alpha_j}} \equiv   \rho_\beta\big|_{U_{\alpha_i}} ,
+  \]
+  in the forth the fact that $\omega \in Z^p$ and thus 
+  \[
+    \omega_{\alpha_1\cdots\alpha_p}\big|_{U_\beta} + \sum_{i = 1}^p (-1)^i \omega_{\beta\alpha_1 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}} = 0,
+  \]
+  in the last line that on $\bigcap_{i = 1}^n U_{\alpha_i}$ 
+  \[
+    \rho_\beta \big|_{\bigcap_{j = 1}^p U_{\alpha_j}}   \omega_{\alpha_1  \cdots \alpha_p} \big|_{U_{\beta}} \equiv \rho_\beta  \omega_{\alpha_1  \cdots \alpha_p},
+  \]
+  and that $\left(\rho_\beta\right)_\beta$ is a partition of unity.
+\end{proof}
 
 
 \begin{lemma}
+\label{lemma:SES}
     The sheaf cochain complex 
     \[
         \begin{diagram}
@@ -676,9 +602,45 @@ In this essay we go over the proof of the isomorphism between the $\check{\mathr
                 \node{\cdots} \arrow{e,t}{} \node{\cA^{p-1}(U)} \arrow{e,t}{d} \node{\cA^p(U)} \arrow{e,t}{d}\node{\cA^{p+1}(U)} \arrow{e,t}{d} \node{\cdots}
             \end{diagram}   
     \]
-    is exact as a cochain complex of Abelian groups. However, this exactly the content of the classical Poincar\'e Lemma, see for example \cite[Theorem~17.14]{Lee12}. If $U$ is diffeomorphic to a star-shaped open subset of $\R^n$, e.g.\ diffeomorphic via a chart to an open ball, then every closed differential form is exact. 
+    is exact as a cochain complex of Abelian groups. However, this is exactly the content of the classical Poincar\'e Lemma, see for example \cite[Theorem~17.14]{Lee12}. If $U$ is diffeomorphic to a star-shaped open subset of $\R^n$, e.g.\ diffeomorphic via a chart to an open ball, then every closed differential form is exact. The second statement follows then as $\ker\left(d^p\big|_U\right) = \cZ^p(U) = \im\left(d^{p+1}\big|_U\right)$.
 \end{proof}
 
+
+\begin{theorem}[De Rham's Theorem]
+    There exists an isomorphism
+    \[ 
+       \Cech(M ; \R) \cong \Rham(M;\R). 
+    \]
+\end{theorem}
+\begin{proof}
+  From the short exact sequences in \autoref{lemma:SES} we can deduce the existence of the following corresponding long exact sequences on cohomology: for all $p,q \in \N$
+  \begin{align*}
+    \cdots &\longrightarrow H^{p-1}(M, \cA^{q-1}) \longrightarrow H^{p-1}(M, \cZ^{q})\longrightarrow \\
+    & \longrightarrow H^{p}(M, \cZ^{q-1})\longrightarrow H^{p}(M, \cA^{q-1})\longrightarrow \cdots.
+  \end{align*}
+  For $p > 1$ the leftmost and rightmost terms are zero thus 
+  \[
+    H^{p-1}(M, \cZ^{q}) \cong  H^{p}(M, \cZ^{q-1}).
+  \]
+  This gives us the following sequence of isomorphisms
+  \begin{align*}
+    \Cech^p(M, \R) &\coloneqq H^p(M,\R) \cong H^{p-1}(M,\cZ^{1}) \cong\\
+    & \cong  H^{p-2}(M,\cZ^{2}) \cong \cdots \cong  H^{1}(M,\cZ^{p-1}).
+  \end{align*}
+  For $p = 1$ (in the above sense) we get the following exact sequence
+  \[
+      H^0(M, \cA^{p-1}) \longrightarrow  H^0(M, \cZ^{p}) \longrightarrow H^1(M, \cZ^{p-1}) \longrightarrow 0.  
+  \]
+  Since the $0^{\text{th}}$ order cohomology is simply the space of global sections the above is isomorphic
+  \[
+      \cA^{p-1}(M) \stackrel{d}{\longrightarrow} \cZ^{p}(M) \longrightarrow H^1(M, \cZ^{p-1}) \longrightarrow 0.  
+  \] 
+  By exactness it follows therefore that 
+  \[
+      H^1(M, \cZ^{p-1}) \cong   \cZ^{p}(M) /  d \cA^{p-1}(M) \eqqcolon \Rham^p(M, \R).
+  \]
+  This proves the assertion.
+\end{proof}
 
 
 

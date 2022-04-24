@@ -1462,28 +1462,6 @@ INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\Terinuva\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
-INPUT C:\Users\Terinuva\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
-INPUT C:\Users\Terinuva\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs7.tfm
-INPUT C:\Users\Terinuva\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary10.tfm
-INPUT C:\Users\Terinuva\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary10.tfm
-INPUT C:\Users\Terinuva\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary7.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
@@ -1514,6 +1492,19 @@ INPUT C:\Users\Terinuva\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary5.t
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\Terinuva\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\Terinuva\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs7.tfm
+INPUT C:\Users\Terinuva\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary10.tfm
+INPUT C:\Users\Terinuva\AppData\Local\MiKTeX\fonts\tfm\public\stmaryrd\stmary7.tfm
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb7t.vf
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
@@ -1538,6 +1529,7 @@ INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb7
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmri7t.vf
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT d:\University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.bbl
 INPUT d:\University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.bbl
 INPUT d:\University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.bbl
@@ -1550,18 +1542,26 @@ INPUT d:\University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.aux
 INPUT d:\University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.out
 INPUT d:\University\Mathematics\14th Semester\Complex Geometry\CG_Aksh.out
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\base\8r.enc
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex8.pfb
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex8.pfb
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
-INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
+INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\Terinuva\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
