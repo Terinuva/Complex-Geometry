@@ -440,7 +440,7 @@
 \def\sig{\boldsymbol{\sigma}}
 
 %\def\emptyset{\mathop{\centernot\ocircle}}
-\def\emptyset{{\centernot\Circle}}
+%\def\emptyset{{\centernot\Circle}}
 
 \def\diam{\mathrm{diam}}
 \def\act{\bigcdot}
@@ -449,6 +449,9 @@
 \def\bbUpsilon{\boldsymbol{\bar{\Upsilon}}}
 
 \def\Set{\mathop{\mathrm{Set}}\nolimits}
+\def\Op{\mathord{\mathbf{Op}}}
+\def\Ob{\mathord{\mathbf{Ob}}}
+\def\Ab{\mathord{\mathbf{Ab}}}
 \def\Hom{\mathord{\mathrm{Hom}}}
 \def\Homb{\mathord{\overline{\mathrm{Hom}}}}
 \def\VHomb{\mathord{\overline{\mathrm{SHom}}}}
@@ -507,7 +510,7 @@ b\@firstchar\boldsymbol{#1}\else#1\fi$}{#2}}
 \begin{document}
 %
 
-\title{Complex Geometry Project}
+\title{Complex Manifolds and K\"ahler Geometry\\ Project 4}
 
 \author[1, 2]{Akshunna S. Dogra\footnote{adogra@nyu.edu}}
 \affil[1] {\small Department of Mathematics, Imperial College London}
@@ -521,19 +524,103 @@ b\@firstchar\boldsymbol{#1}\else#1\fi$}{#2}}
 In this essay we go over the proof of the isomorphism between the $\check{\mathrm{C}}$ech cohomology
  \TitleEquation{\Cech(M;\R)}{2}
  and the de Rham cohomology \TitleEquation{\Rham(M;\R)}{2} 
- of a smooth manifold $M$.
+ of a smooth manifold $M$ based on the exposition in \cite{GH78}.
 \end{abstract}
 
 
+\section{Short Introduction to Sheaves}
+
+Let $(X,\mathcal T)$ be a topological space. We associate with this space the category $\Op(X)$ with its set of objects just being the open sets $\mathcal T$ and the morphisms $\Hom(U,V)$ either being solely the inclusion $U \hookrightarrow V$ if $U \subset V$ or otherwise $\emptyset$.
+
+Further, let $\Ab$ denote the category of Abelian groups.
+
 \begin{defn}
-    \begin{itemize}
-        \item $\cA^p$ sheaf of smooth $p$-forms on $M$
-        \item $\cZ^p$ sheaf of closed $p$-forms on $M$
-    \end{itemize}
+    Let $\mathcal F : \Op(X) \to \Ab$ be a contravariant functor. We call elements $\sigma \in \mathcal F(V)$ sections of $V$ and the image of the inclusion map $U \hookrightarrow V$ under the functor by $\sigma|_U$, the restriction of $\sigma$ to $U$. 
+    
+    We call such a functor $\mathcal F$, a \textit{pre-sheaf}, if $\mathcal F(\emptyset) = \mathbf 0$, the $0$-group.
 \end{defn}
+
+This definition encodes some of the basic notions one associates with local constructions on a manifold, such as the set of holomorphic functions on an open subset of a complex manifold, or the local vector fields on a manifold. However, these enjoy some further gluing properties. For this reason we add two requirements that allow us to speak of sheaves.
+
+\begin{defn}
+   A pre-sheaf $\mathcal F : \Op(X) \to \Ab$ is called a \textit{sheaf} if in addition it satisfies the following two requirements: 
+   \begin{itemize}
+     \item For all $U,V \in \mathcal T$ and all sections $\sigma \in \mathcal F(U)$ and $\tau \in \mathcal F(V)$ such that
+     \[
+        \sigma\big|_{U \cap V} = \tau \big|_{U \cap V}  
+     \]
+     there exists $\omega \in \mathcal F(U \cup V)$ s.t.\ 
+     \[
+        \sigma = \omega\big|_{U}, \qquad \tau = \omega\big|_{V}.  
+     \]
+     \item If $\sigma \in \mathcal F(U\cup V) $, s.t.\ $\sigma\big|_U = \sigma\big|_V = 0$, then $\sigma = 0$.
+   \end{itemize}
+\end{defn}
+
+Let $G$ be a fixed Abelian group. One might think that an easy example of sheaf would be the constant sheaf that assigns to every open set $U$ (other than the empty set) the whole group $G$, i.e.\ $\mathcal F(U) = G$, with all the restriction maps being the identity. However, once the space $X$ has more than one connected one runs into trouble. For suppose that $X$ has two connected components $X_1 \cup X_2 = X$. Then for $g_1, g_2 \in G$ distinct one can set 
+\[
+  g_1 \eqqcolon \sigma \in \mathcal F(X_1), \qquad  g_2 \eqqcolon \sigma \in \mathcal F(X_2).  
+\]
+Since $X_1 \cap X_2 = \emptyset$ one trivially has
+\[
+  \sigma\big|_{X_1 \cap X_2}  = 0 = \tau\big|_{X_1 \cap X_2} 
+\]
+but there cannot be a $g \in \mathcal F(X) = G$ such that its restrictions are equal to $g_1$ and $g_2$ for
+\[
+  g\big|_{X_1} = g = g\big|_{X_2}.  
+\]
+This therefore only a pre-sheaf. The correct ``sheafification'' of the constant pre-sheaf is the constant sheaf which we shall present together with a couple of examples.
+
+\begin{example}
+  \begin{itemize}
+    \item The constant sheaf $\underline{G}$ which assigns to $U \in \mathcal T$ the group $G^{n}$ where $n$ is the number of connected components of $X$ $U$ intersects. The restriction maps are the obvious ones. 
+    \item Let $M$ be a smooth manifold. Let $\cA^p$ be the sheaf of smooth $p$-forms on $M$, i.e.\ for $U \subset M$, $\cA^p(U)$ is the (vector) space of smooth, real-valued $p$-forms defined on $U$.
+    \item Analogously to above let $\cZ^p$ be the sheaf of closed $p$-forms on $M$.
+    \item Let $(X,J)$ be a complex manifold. Let $\mathscr O$ denote the sheaf of holomorphic functions on $X$, i.e.\ for $U \subset X$, $\mathscr O(U)$ is the (vector) space of holomorphic functions defined on $U$.
+  \end{itemize}
+\end{example}
+
 \begin{remark}
-  For $p = 0$, $\cZ^0$ is simply the constant sheaf $\underline{\R}$.
+  Note that $\cA^0$ is simply the sheaf $\mathscr C^\infty$ of smooth functions on $M$ and $\cZ^0$ is the constant sheaf $\underline{\R}$.
 \end{remark}
+
+\section{Cohomology of Sheaves}
+
+Let $\mathcal F$ be a sheaf on $X$ and $\mathcal U = \left(U_\alpha\right)_{\alpha \in I}$ a locally finite open cover, that is a cover s.t.\ for any $U_\alpha \in \mathcal U$ there exist only finitely many $U_\beta \in \mathcal U$ that are non-zero.
+
+We define the chain complex of $\mathcal U$ and $\mathcal F$ to be given by the groups 
+\[
+  C^p(\mathcal U, \mathcal F) \eqdef \prod_{\substack{\alpha_0, \dots, \alpha_p \in I \\ \alpha_0 \neq \cdots \neq \alpha_p }} \mathcal F \left( U_{\alpha_0} \cap \cdots \cap U_{\alpha_p} \right)  
+\]
+and coboundary operator $d : C^p(\mathcal U, \mathcal F) \to C^{p+1}(\mathcal U, \mathcal F)$
+\[
+  \left(d \omega\right)_{\alpha_0 \cdots \alpha_{p+1}} =  \sum_{i = 0}^{p+1} (-1)^{i} \omega_{\alpha_1 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_0} \cap \cdots \cap U_{\alpha_{p+1}} }   
+\]
+where $\widehat{\alpha_i}$ denotes the lack of the index $\alpha_i$. Elements of $C^p(\mathcal U, \mathcal F)$ are called \textit{$p$-cochains}. A $p$-cochain $\sigma$ will be known as a \textit{cocylce} if $d\sigma = 0$, the set of which shall be denoted by $Z^p(\mathcal U, \mathcal F)$, and a \textit{coboundary} if there exists $p-1$-cochain $\tau$, s.t. $d\tau = 0$. 
+
+It is a routine calculation to check that $d^2 = 0$, thus $d C^{p-1} \subset Z^p$ and one can define the cohomology group
+\[
+  H^p(\mathcal U, \mathcal F) \coloneqq \frac{Z^p(\mathcal U,\mathcal F)}{dC^{p-1}(\mathcal U,\mathcal F)}.
+\]
+However, this group strongly depends on the choice of open cover $\mathcal U$. Thus, we define the $\check{\mathrm{C}}$ech cohomology group of the sheaf $\mathcal F$ over $X$ to be the direct limit over all locally finite open covers of the above group, i.e.\ 
+\[
+  H^p(X,\mathcal F)  \coloneqq  \check H^p(X,\mathcal F)  \coloneqq \varinjlim_{\mathcal U}   H^p(\mathcal U, \mathcal F).
+\] 
+Of course, it is extremely hard to calculate the above direct limit in general. However, often there are conditions under which for a sufficiently fine yet still finite cover $\mathcal U$ of a sufficiently nice space $X$ one has 
+\[
+  H^p(X,\mathcal F)  \cong  H^p(\mathcal U, \mathcal F).
+\]
+We shall prove that this is the case in the following section for the $\check{\mathrm{C}}$ech cohomology of a manifold.
+
+\begin{defn}[$\check{\mathrm{C}}$ech Cohomology of a Smooth Manifold]
+  Let $M$ be a smooth connected manifold. We call the group $\check H^p(M,\R)$ the $p^{\text{th}}$ $\check{\mathrm{C}}$ech cohomology group of $M$.
+\end{defn}
+
+
+
+\section{De Rham's Theorem} 
+
+We shall need the following two lemmate to show how one can calculate the $\check{\mathrm{C}}$ech cohomology group of a manifold.
 
 \begin{lemma}
     For $p > 0$ and all $q\geqslant 0$, the $\check{\mathrm{C}}$ech cohomology groups of the sheaves $\cA^q$ are trivial, i.e. $\Cech^p(M,\cA^q) = 0$. 
@@ -544,32 +631,32 @@ In this essay we go over the proof of the isomorphism between the $\check{\mathr
   Let $\omega \in Z^p(\CU, \cA^q)$ we have to find a $\psi \in C^{p-1}(\CU, \cA^q)$ such that $d \psi = \omega$. %To simplify the argument, we shall first assume that $ \supp \omega \subset U$ for some fixed $U \in \CU$.
   $\omega$ consists of a collection of maps 
   \[
-      \omega_{\alpha_1 \cdots \alpha_p} : \bigcap_{i = 1}^n U_{\alpha_i} \longrightarrow \cA^q \left( \bigcap_{i = 1}^n U_{\alpha_i} \right)
+      \omega_{\alpha_0 \cdots \alpha_p} : \bigcap_{i = 1}^n U_{\alpha_i} \longrightarrow \cA^q \left( \bigcap_{i = 1}^n U_{\alpha_i} \right)
   \]
   for any combination of $p$ distinct indices $\alpha_1, \dots, \alpha_p \in I$. For indices $\alpha_1, \dots, \alpha_{p-1} \in I$ we define $\psi$ to be
   \[
-    \psi_{\alpha_1 \cdots \alpha_{p-1}} = \sum_{\beta \in I} \rho_\beta \omega_{\beta\alpha_1 \cdots \alpha_{p-1}}.
+    \psi_{\alpha_0 \cdots \alpha_{p-1}} = \sum_{\beta \in I} \rho_\beta \omega_{\beta\alpha_0 \cdots \alpha_{p-1}}.
   \]
   We have to prove that $\omega = d \psi$. On $\bigcap_{i = 1}^p U_{\alpha_i}$
   \begin{align*}
-    \left(d \psi\right)_{\alpha_1 \cdots \alpha_{p}} &= - \sum_{i = 1}^p (-1)^i \psi_{\alpha_1 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}}  \\
-    & = - \sum_{i = 1}^p \sum_{\beta \in I} (-1)^i \rho_\beta \big|_{U_{\alpha_i}} \omega_{\beta\alpha_1 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}}  \\
-    & = - \sum_{i = 1}^p \sum_{\beta \in I} (-1)^i \rho_\beta \big|_{\bigcap_{j = 1}^p U_{\alpha_j}} \omega_{\beta\alpha_1 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}}  \\
-    & = - \sum_{\beta \in I} \rho_\beta \big|_{\bigcap_{j = 1}^p U_{\alpha_j}}  \sum_{i = 1}^p (-1)^i \omega_{\beta\alpha_1 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}} \\
-    & = \sum_{\beta \in I} \rho_\beta \big|_{\bigcap_{j = 1}^p U_{\alpha_j}}   \omega_{\alpha_1  \cdots \alpha_p} \big|_{U_{\beta}} \\
-    & = \sum_{\beta \in I} \rho_\beta  \omega_{\alpha_1  \cdots \alpha_p} =\omega_{\alpha_1  \cdots \alpha_p} .
+    \left(d \psi\right)_{\alpha_0 \cdots \alpha_{p}} &= \sum_{i = 0}^p (-1)^i \psi_{\alpha_0 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}}  \\
+    & = \sum_{i = 0}^p \sum_{\beta \in I} (-1)^i \rho_\beta \big|_{U_{\alpha_i}} \omega_{\beta\alpha_1 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}}  \\
+    & = \sum_{i = 0}^p \sum_{\beta \in I} (-1)^i \rho_\beta \big|_{\bigcap_{j = 0}^p U_{\alpha_j}} \omega_{\beta\alpha_0 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}}  \\
+    & =  \sum_{\beta \in I} \rho_\beta \big|_{\bigcap_{j = 0}^p U_{\alpha_j}}  \sum_{i = 0}^p (-1)^i \omega_{\beta\alpha_0 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}} \\
+    & = \sum_{\beta \in I} \rho_\beta \big|_{\bigcap_{j = 0}^p U_{\alpha_j}}   \omega_{\alpha_0  \cdots \alpha_p} \big|_{U_{\beta}} \\
+    & = \sum_{\beta \in I} \rho_\beta  \omega_{\alpha_0  \cdots \alpha_p} =\omega_{\alpha_0  \cdots \alpha_p} .
   \end{align*}
-  where in the third line we used that on $ \bigcap_{i = 1}^n U_{\alpha_i}$ and all $i \in \{1,\dots, p\}$
+  where in the third line we used that on $ \bigcap_{i = 0}^n U_{\alpha_i}$ and all $i \in \{0,\dots, p\}$
   \[
-      \rho_\beta \big|_{\bigcap_{j = 1}^p U_{\alpha_j}} \equiv   \rho_\beta\big|_{U_{\alpha_i}} ,
+      \rho_\beta \big|_{\bigcap_{j = 0}^p U_{\alpha_j}} \equiv   \rho_\beta\big|_{U_{\alpha_i}} ,
   \]
   in the forth the fact that $\omega \in Z^p$ and thus 
   \[
-    \omega_{\alpha_1\cdots\alpha_p}\big|_{U_\beta} + \sum_{i = 1}^p (-1)^i \omega_{\beta\alpha_1 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}} = 0,
+    \omega_{\alpha_0\cdots\alpha_p}\big|_{U_\beta} - \sum_{i = 0}^p (-1)^i \omega_{\beta\alpha_0 \cdots \widehat{\alpha_i} \cdots \alpha_p} \big|_{U_{\alpha_i}} = 0,
   \]
   in the last line that on $\bigcap_{i = 1}^n U_{\alpha_i}$ 
   \[
-    \rho_\beta \big|_{\bigcap_{j = 1}^p U_{\alpha_j}}   \omega_{\alpha_1  \cdots \alpha_p} \big|_{U_{\beta}} \equiv \rho_\beta  \omega_{\alpha_1  \cdots \alpha_p},
+    \rho_\beta \big|_{\bigcap_{j = 0}^p U_{\alpha_j}}   \omega_{\alpha_1  \cdots \alpha_p} \big|_{U_{\beta}} \equiv \rho_\beta  \omega_{\alpha_1  \cdots \alpha_p},
   \]
   and that $\left(\rho_\beta\right)_\beta$ is a partition of unity.
 \end{proof}
@@ -606,11 +693,19 @@ In this essay we go over the proof of the isomorphism between the $\check{\mathr
 \end{proof}
 
 
+The following important result allows one to relate the $\check{\mathrm{C}}$ech cohomology group of $M$ with the de Rham cohomology group and to have a criterion for when a cover is fine enough.
+
+
 \begin{theorem}[De Rham's Theorem]
     There exists an isomorphism
     \[ 
        \Cech(M ; \R) \cong \Rham(M;\R). 
     \]
+    and in particular 
+    \[
+       \Cech(M ; \R) \cong   \Cech(\mathcal U ; \R)
+    \]
+    for any open cover wherein each set is contractible.
 \end{theorem}
 \begin{proof}
   From the short exact sequences in \autoref{lemma:SES} we can deduce the existence of the following corresponding long exact sequences on cohomology: for all $p,q \in \N$
